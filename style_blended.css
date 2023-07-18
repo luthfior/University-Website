@@ -1,0 +1,221 @@
+@media (max-width: 991.98px) {
+  .offcanvas-collapse {
+    position: fixed;
+    top: 75px; /* Height of navbar */
+    left: 100%;
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    overflow-y: auto;
+    visibility: hidden;
+    background-color: #073c64;
+    transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+  }
+  .offcanvas-collapse.open {
+    visibility: visible;
+    transform: translateX(-100%);
+  }
+}
+.changeColor {
+  background-color: #073c64;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+}
+#navbar {
+  position: relative;
+  z-index: 9999;
+  position: fixed;
+}
+.nav-link:hover::after {
+  content: '';
+  display: block;
+  border-bottom: 2px solid #ff8c00;
+  width: 80%;
+  margin: auto;
+  padding-bottom: 2px;
+  margin-bottom: -4px;
+}
+#Navbar #navmenu {
+  color: white;
+  margin: auto;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Comfortaa', cursive;
+  font-size: 16px;
+}
+.jumbotron {
+  padding: 2rem 1rem;
+  background-image: url(img/elearning.png);
+  width: 100%;
+  height: 720px;
+  top: 80px;
+  position: relative;
+  margin-top: -100px;
+  margin-bottom: 100px;
+  z-index: 2;
+  background-repeat: no-repeat;
+  background-repeat: repeat-x;
+}
+.jumbotron::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+section #textJumbotron {
+  z-index: 1;
+  position: relative;
+  color: #fff;
+  font-family: proxima-nova;
+  margin-top: 120px;
+  font-size: 70px;
+  font-weight: 800;
+  text-align: center;
+}
+#infoJumbotron {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+section h5 {
+  z-index: 1;
+  position: relative;
+  color: #fff;
+  font-family: proxima-nova;
+  margin-top: 50px;
+  font-size: 18px;
+  font-weight: 800;
+  text-align: left;
+}
+section p {
+  z-index: 1;
+  position: relative;
+  color: #fff;
+  font-family: proxima-nova;
+  margin-top: 50px;
+  font-size: 14px;
+  text-align: left justify;
+  margin-top: 30px;
+}
+section #lebihLanjut {
+  margin-left: 200px;
+  width: 150px;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  color: #fff;
+  left: 200px;
+  font-family: 'Lato';
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
+}
+.judul1 {
+  color: #073c64;
+  font-weight: 800;
+  margin-top: 50px;
+  text-align: left;
+}
+.judul2 {
+  color: #073c64;
+  font-weight: 800;
+  margin-top: 100px;
+  text-align: left;
+}
+.judul3 {
+  color: #073c64;
+  font-weight: 800;
+  margin-top: 100px;
+  text-align: center;
+}
+.block-oranye {
+  width: 630px;
+  height: 5px;
+  background-color: #ff8c00;
+  margin: auto;
+  margin-top: -10px;
+  margin-bottom: 30px;
+  margin-left: 0;
+  position: relative;
+  z-index: 1;
+}
+.block-oranye2 {
+  width: 530px;
+  height: 5px;
+  background-color: #ff8c00;
+  margin: auto;
+  margin-top: -10px;
+  margin-left: 0;
+}
+.block-oranye3 {
+  width: 420px;
+  height: 5px;
+  background-color: #ff8c00;
+  margin: auto;
+  margin-top: -10px;
+  margin-left: 0;
+}
+.block-oranye4 {
+  width: 620px;
+  height: 5px;
+  background-color: #ff8c00;
+  margin: auto;
+  margin-top: -10px;
+}
+.block-oranye5 {
+  width: 120px;
+  height: 5px;
+  background-color: #ff8c00;
+  margin: auto;
+  margin-top: -10px;
+}
+#sub {
+  font-family: 'Lato', sans-serif;
+  text-align: justify;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  margin-top: 10px;
+}
+#sub2 {
+  font-family: 'Lato', sans-serif;
+  text-align: right;
+  text-align: justify;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  margin-top: 10px;
+}
+p {
+  font-family: 'Lato', sans-serif;
+  text-align: justify;
+  font-size: 18px;
+}
+.informasi {
+  background-color: #f8f9fb;
+  margin: auto;
+  width: 90%;
+  height: fit-content;
+  padding-bottom: 50px;
+  border-radius: 20px;
+  margin-bottom: 100px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.judulKontak {
+  font-family: 'Circular Std Bold';
+  font-size: 28px;
+  color: #073c64;
+  font-weight: 800;
+}
+#kontak {
+  background-color: #eef1f2;
+  bottom: 0;
+  position: relative;
+  height: 400px;
+}
+.container-footer {
+  background-color: #073c64;
+}

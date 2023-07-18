@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>INFORMASI</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- AKhir Favicon -->
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Akhir Bootstrap -->
+
+    <!-- Animated (AOS) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Akhir Animated (AOS) -->
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet" />
+    <link href="//db.onlinewebfonts.com/c/961a181da27e7cbc072ec2fb5bbfe2a9?family=Circular+Std+Bold" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet" />
+    <link href="https://use.typekit.net/emv3zbo.css" rel="stylesheet" crossorigin="anonymous" />
+    <!-- Akhir Font -->
+
+    <style>
+      @media (max-width: 991.98px) {
+        .offcanvas-collapse {
+          position: fixed;
+          top: 75px; /* Height of navbar */
+          left: 100%;
+          width: 100%;
+          padding-right: 1rem;
+          padding-left: 1rem;
+          overflow-y: auto;
+          visibility: hidden;
+          background-color: #073c64;
+          transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+        }
+        .offcanvas-collapse.open {
+          visibility: visible;
+          transform: translateX(-100%);
+        }
+      }
+
+      #Navbar {
+        z-index: 9999;
+        position: fixed;
+        background-color: #073c64;
+        box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+      }
+
+      .nav-link:hover::after {
+        content: '';
+        display: block;
+        border-bottom: 2px solid #ff8c00;
+        width: 80%;
+        margin: auto;
+        padding-bottom: 2px;
+        margin-bottom: -4px;
+      }
+
+      #Navbar #navmenu {
+        color: white;
+        margin: auto;
+        text-align: center;
+        text-decoration: none;
+        font-family: 'Comfortaa', cursive;
+      }
+
+      #Navbar .nav-log {
+        margin: auto;
+        width: 89px;
+        height: 40px;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        padding-top: 7px;
+        padding-left: 7px;
+        margin-right: 10px;
+      }
+
+      #info {
+        width: 90%;
+        height: fit-content;
+        margin: auto;
+        margin-top: 150px;
+        background-color: #f8f9fb;
+        height: fit-content;
+        padding-top: 50px;
+        padding-bottom: 30px;
+        border-radius: 10px;
+        margin-bottom: 100px;
+      }
+
+      #sub {
+        font-family: 'Lato', sans-serif;
+        text-align: justify;
+        font-size: 20px;
+        font-weight: bold;
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+
+      #sub2 {
+        font-family: 'Lato', sans-serif;
+        text-align: justify;
+        font-size: 18px;
+        margin-bottom: 3px;
+        margin-left: 30px;
+      }
+
+      .judul {
+        color: #073c64;
+        font-weight: 800;
+        margin-top: 10px;
+        text-transform: uppercase;
+        font-family: 'Circular Std Bold';
+      }
+
+      .judulInfo {
+        color: #073c64;
+        font-weight: 800;
+        margin-top: 10px;
+        text-transform: uppercase;
+        font-family: 'Circular Std Bold';
+      }
+
+      .block-oranye {
+        width: 100px;
+        height: 5px;
+        background-color: #ff8c00;
+        margin: auto;
+        margin-top: -10px;
+        margin-bottom: 50px;
+      }
+
+      .block-oranye2 {
+        width: 420px;
+        height: 5px;
+        background-color: #ff8c00;
+        margin: auto;
+        margin-top: -10px;
+        margin-bottom: 50px;
+      }
+
+      .block-oranye3 {
+        width: 150px;
+        height: 5px;
+        background-color: #ff8c00;
+        margin: auto;
+        margin-top: -10px;
+        margin-bottom: 50px;
+      }
+
+      a {
+        color: #ff8c00;
+        font-family: 'Lato', sans-serif;
+        text-align: justify;
+        font-size: 18px;
+        text-decoration: none;
+      }
+
+      .judulInformasi {
+        font-family: 'Circular Std Bold';
+        font-size: 28px;
+        color: #073c64;
+        font-weight: 800;
+      }
+
+      #informasi {
+        background-color: #eef1f2;
+        bottom: 0;
+        position: relative;
+        height: 350px;
+      }
+
+      .container-footer {
+        background-color: #073c64;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <section id="navbar">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3 bgcolor" id="Navbar">
+        <div class="container-fluid me-5 ms-5">
+          <a class="navbar-brand" href="index.html"><img src="img/logo2.png" alt="logo" width="200" /></a>
+          <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation" id="navbarSideCollapse">
+            <span class="navbar-toggler-icon navbar-toggler-icon-light">
+              <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+            </span>
+          </button>
+          <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active me-3" href="index.html" id="navmenu" style="cursor: pointer;">Beranda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-3 sejarahUnkris" id="navmenu" style="cursor: pointer;">Sejarah Unkris</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-3 visiMisi" id="navmenu" style="cursor: pointer;">Visi & Misi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-3 strukturOrganisasi" id="navmenu" style="cursor: pointer;">Struktur Organisasi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-3 akreditasi" id="navmenu" style="cursor: pointer;">Akreditasi</a>
+              </li>
+              <li class="nav-item nav-log">
+                <a class="me-3" id="navmenu" href="simak/login.php">DAFTAR</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <!-- Akhir Navbar -->
+
+    <!-- Info -->
+    <section id="info" class="shadow-lg">
+      <div class="row justify-content-center text-center">
+        <div class="col-md">
+          <h2 class="judul" data-aos="fade-down">PROFIL</h2>
+          <div class="block-oranye" data-aos="fade-down"></div>
+          <h5 class="judul text-center" data-aos="fade-down">REKTOR UNKRIS</h5>
+          <img src="img/rektor.jpg" class="img-fluid" alt="rektor" data-aos="fade-up" style="height: 400px; width: 300px; position: relative; margin: auto; margin-bottom: 50px" />
+        </div>
+      </div>
+      <div class="row justify-content-center" data-aos="fade-right">
+        <div class="col-md-10">
+          <p id="sub" class="text-center" data-aos="fade-right">SAMBUTAN REKTOR</p>
+          <p id="sub2" style="font-weight: bold; margin-top: 50px;" >Assalamu'alaikum wr.wb</p>
+          <p id="sub2">Salam Sejahtera bagi kita semua,</p>
+          <p id="sub2" style="margin-top: 10px">
+            Universitas Krisnadwipayana (UNKRIS) didirikan pada tanggal 1 April 1952, 68 tahun yang lalu, nama Krisnadwipayana diambil dari nama seorang begawan yang berhasil mendidik keluarga Bharata menjadi satria pinandita, yaitu 
+            Insan Illahi yang berwatak baik, berbudi luhur, cerdas, tekun, terampil dan memiliki semangat pengabdian yang tinggi terhadap Bangsa dan Negara. 
+            Dengan kebesaran nama Krisnadwipayana para Pendiri UNKRIS berharap para lulusan UNKRIS dapat menjadi Insan Illahi sebagaimana didikan Begawan Krisnadwipayana.
+          </p>
+          <p id="sub2" style="margin-top: 10px">
+            UNKRIS memiliki gedung perkuliahan dan administrasi yang berdiri di atas lahan ± 16Ha berada di Jatiwaringin, Pondok Gede, Jakarta Timur. 
+            Kampus UNKRIS dipenuhi aneka tanaman hijau dan tanaman produktif yang rimbun nan asri, teduh dan nyaman untuk belajar, selain itu dilengkapi pula dengan Pendopo, Masjid, Sarana Olah Raga dan Lapangan Parkir yang luas. 
+            Saat ini telah dibuat Master Plan Percepatan Pembangunan Universitas Krisnadwipayana (MP3UK) Tahun 2015-2020, dengan MP3UK diharapkan dapat diwujudkan Universitas Krisnadwipayana sebagai Universitas Unggul dengan program studi yang berkualitas, inovasi dalam pengembangan sistem pendidikan tinggi pada tahun 2025.
+          </p>
+          <p id="sub2" style="margin-top: 10px">
+            Kontribusi UNKRIS terlihat dari jumlah alumni yang dihasilkan, diantaranya telah berhasil dalam berkarier antara lain menempati posisi sebagai Menteri, Wakil Menteri, Hakim Agung, Duta Besar, Bankir maupun Pengusaha, namun
+            UNKRIS belum merasa puas dan bangga karena masih banyak generasi penerus bangsa yang masih membutuhkan pendidikan khususnya di bidang pendidikan tinggi, mengingat masa depan Bangsa dan Negara Indonesia berada di pundak mereka.
+            Saat ini seluruh Program Studi yang ada di UNKRIS sejumlah 17 Program Studi telah terakreditasi oleh Badan Akreditasi Nasional Perguruan Tinggi. 
+            Program Strata 1 terdiri dari Fakultas Hukum, Fakultas Ekonomi, Fakultas Ilmu Administrasi & Fakultas Teknik, sedangkan Program Strata 2 terdiri dari Magister Manajemen, Magister Ilmu Hukum, Magister Ilmu Administrasi & Magister Teknik serta Program Strata 3, yaitu Program Doktor Ilmu Hukum.
+          </p>
+          <p id="sub2" style="margin-top: 10px">
+            Informasi lebih lanjut mengenai UNKRIS dapat dilihat melalui website kami. Kami sangat senang bisa menyapa Anda disini dan kami menunggu Anda untuk bergabung menjadi keluarga besar Universitas Krisnadwipayana.
+          </p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <img src="img/unkris.jpg" class="img-fluid" alt="unkris" width="700" style="position: relative; left: 50%; transform: translateX(-50%); margin-top: 100px; margin-bottom: 50px" data-aos="fade-down"/>
+          <h3 class="judul text-center" style="margin-bottom: 30px;" data-aos="fade-right">SEJARAH SINGKAT UNKRIS</h3>
+          <p id="sub2" style="margin-top: 10px" data-aos="fade-right">
+            Universitas Krisnadwipayana (UNKRIS) didirikan pada tanggal 1 April 1952, 68 tahun yang lalu, nama Krisnadwipayana diambil dari nama seorang begawan yang berhasil mendidik keluarga Bharata menjadi satria pinandita, yaitu 
+            Insan Illahi yang berwatak baik, berbudi luhur, cerdas, tekun, terampil dan memiliki semangat pengabdian yang tinggi terhadap Bangsa dan Negara. 
+            Dengan kebesaran nama Krisnadwipayana para Pendiri UNKRIS berharap para lulusan UNKRIS dapat menjadi Insan Illahi sebagaimana didikan Begawan Krisnadwipayana.
+          </p>
+          <p id="sub2" style="margin-top: 10px" data-aos="fade-right">
+            UNKRIS memiliki gedung perkuliahan dan administrasi yang berdiri di atas lahan ± 16Ha berada di Jatiwaringin, Pondok Gede, Jakarta Timur. 
+            Kampus UNKRIS dipenuhi aneka tanaman hijau dan tanaman produktif yang rimbun nan asri, teduh dan nyaman untuk belajar, selain itu dilengkapi pula dengan Pendopo, Masjid, Sarana Olah Raga dan Lapangan Parkir yang luas. 
+            Saat ini telah dibuat Master Plan Percepatan Pembangunan Universitas Krisnadwipayana (MP3UK) Tahun 2015-2020, dengan MP3UK diharapkan dapat diwujudkan Universitas Krisnadwipayana sebagai Universitas Unggul dengan program studi yang berkualitas, inovasi dalam pengembangan sistem pendidikan tinggi pada tahun 2025.
+          </p>
+          <p id="sub2" style="margin-top: 10px" data-aos="fade-right">
+            Kontribusi UNKRIS terlihat dari jumlah alumni yang dihasilkan, diantaranya telah berhasil dalam berkarier antara lain menempati posisi sebagai Menteri, Wakil Menteri, Hakim Agung, Duta Besar, Bankir maupun Pengusaha, namun
+            UNKRIS belum merasa puas dan bangga karena masih banyak generasi penerus bangsa yang masih membutuhkan pendidikan khususnya di bidang pendidikan tinggi, mengingat masa depan Bangsa dan Negara Indonesia berada di pundak mereka.
+            Saat ini seluruh Program Studi yang ada di UNKRIS sejumlah 17 Program Studi telah terakreditasi oleh Badan Akreditasi Nasional Perguruan Tinggi. 
+            Program Strata 1 terdiri dari Fakultas Hukum, Fakultas Ekonomi, Fakultas Ilmu Administrasi & Fakultas Teknik, sedangkan Program Strata 2 terdiri dari Magister Manajemen, Magister Ilmu Hukum, Magister Ilmu Administrasi & Magister Teknik serta Program Strata 3, yaitu Program Doktor Ilmu Hukum.
+          </p>
+          <p id="sub2" style="margin-top: 10px" data-aos="fade-right">
+            Informasi lebih lanjut mengenai UNKRIS dapat dilihat melalui website kami. Kami sangat senang bisa menyapa Anda disini dan kami menunggu Anda untuk bergabung menjadi keluarga besar Universitas Krisnadwipayana.
+          </p>
+        </div>
+        <div class="row justify-content-center" data-aos="fade-left">
+        <div class="col-md-10">
+          <h5 class="judul text-center" style="margin-top: 100px;">VISI & MISI UNKRIS</h5>
+          <p id="sub2" style="font-weight: bold; margin-top: 30px;">JATI DIRI UNKRIS</p>
+          <p id="sub2" style="margin-top: 10px;">
+            Secara harfiah, jati diri dapat dipadankan dengan kepribadian, yang di dalamnya mengandung aspek lahiriah (nama, waktu lahir, dan sebagainya), dan aspek batiniah. Aspek yang kedua itulah yang mengandung makna lebih dalam dan lebih mendasar serta merupakan ciri hakiki yang bersumber pada makna dari tiga bidang ajaran Krisnadwipayana seperti yang telah diuraikan di atas beserta perwujudannya.
+          </p>
+        <p id="sub2" style="margin-top: 10px;">
+          Dengan demikian Jati Diri Universitas Krisnadwipayana adalah bahwa Universitas Krisnadwipayana menghendaki terwujudnya insan yang:
+        </p>
+        <ol id="sub2" style="margin-top: 10px;">
+            <li>Kuat dan ketaqwaannya terhadap Tuhan Yang Maha Esa;</li>
+            <li>Luhur budinya;</li>
+            <li>Tinggi moralnya;</li>
+            <li>Tinggi kecerdasan dan keterampilannya;</li>
+            <li>Tinggi semangat pengabdiannya kepada bangsa dan negara.</li>
+        </ol>
+        <p id="sub2" style="margin-top: 10px;">Ciri hakiki dari Jati Diri tersebut di atas selanjutnya menjiwai dan tergambar pada Visi Universitas.</p>
+            <p id="sub2" style="font-weight: bold; margin-top: 30px;">VISI UNKRIS</p>
+            <p id="sub2">Terwujudnya Universitas Krisnadwipayana menjadi Perguruan Tinggi Unggulan pada Tahun 2025.</p>
+            <p id="sub2" style="font-weight: bold; margin-top: 30px;">MISI UNKRIS</p>
+            <ol id="sub2" style="margin-top: 10px;">
+                <li>Meningkatkan mutu pendidikan dan pengajaran UNKRIS sesuai Tri Dharma Perguruan Tinggi dengan menitik beratkan pada pemberdayaan masyarakat;</li>
+                <li>Meningkatkan mutu kesejahteraan sumber daya manusia berupa dosen dan tenaga kependidikan sesuai dengan Tri Dharma Perguruan Tinggi;</li>
+                <li>Menjamin ketersediaan sumber belajar yang merata di semua Fakultas dan PPs.</li>
+                <li>Menciptakan tata kelola Universitas yang baik.</li>
+            </ol>
+            <p id="sub2" style="font-weight: bold; margin-top: 30px;">TUJUAN UNKRIS</p>
+            <ol id="sub2" style="margin-top: 10px;">
+                <li>Menghasilkan lulusan UNKRIS yang beriman dan bertaqwa kepada Tuhan Yang Maha Esa, berbudi luhur, bermoral tinggi, cerdas, dan terampil, serta penuh rasa pengabdian kepada almamater, bangsa dan negara yang dijiwai oleh Pancasila dan Undang-undang Dasar Negara Republik Indonesia tahun 1945.</li>
+                <li>Meningkatkan ilmu pengetahuan dan teknologi, informasi, dan komunikasi serta kebudayaan nasional dengan tetap memelihara nilai-nilai tradisional.</li>
+                <li>Meningkatkan kemampuan profesional keilmuan agar memiliki daya saing baik secara nasional maupun global dengan tetap memperhatikan kaidah-kaidah etika keilmuan.</li>
+                <li>Meningkatkan pengabdian atas pemanfaatan hasil ilmu pengetahuan dan teknologi untuk kesejahteraan masyarakat.</li>
+                <li>Meningkatkan pengabdian atas pemanfaatan hasil ilmu pengetahuan dan teknologi untuk kesejahteraan masyarakat.</li>
+            </ol>
+            <div class="row justify-content-center text-center" style="margin-top: 100px; margin-bottom: 50px;">
+                <div class="col-md-10">
+                <h5 class="judul text-center">STRUKTUR ORGANISASI UNKRIS</h5>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-3" data-aos="flip-left">
+                    <p id="sub" class="text-center">REKTOR</p>
+                    <img src="img/rektor.jpg" class="img-fluid" alt="rektor" style="width: 400px; height: 300px; margin-bottom: 50px" />
+                    <p id="sub2" style="margin-top: -40px; font-size: 12px;">Dr. Ir. Ayub Muktiono, M.SIP, CIQaR</p>
+                </div>
+                <div class="col-md-3" data-aos="flip-left">
+                    <p id="sub" class="text-center">WAKIL REKTOR I</p>
+                    <img src="img/warek1.jpg" class="img-fluid" alt="rektor" style="width: 400px; height: 300px; margin-bottom: 50px" />
+                    <p id="sub2" class="text-center" style="margin-top: -40px; font-size: 12px;">Dr. Ismail Razak, SE, M.Si</p>
+                </div>
+                <div class="col-md-3" data-aos="flip-left">
+                    <p id="sub" class="text-center">WAKIL REKTOR II</p>
+                    <img src="img/warek2.jpg" class="img-fluid" alt="rektor" style="width: 400px; height: 300px; margin-bottom: 50px" />
+                    <p id="sub2" class="text-center" style="margin-top: -40px; font-size: 12px;">Dr. H. Suwanda, ST., MT</p>
+                </div>
+                <div class="col-md-3" data-aos="flip-left">
+                    <p id="sub" class="text-center">WAKIL REKTOR III</p>
+                    <img src="img/warek3.jpg" class="img-fluid" alt="rektor" style="width: 400px; height: 300px; margin-bottom: 50px" />
+                    <p id="sub2" class="text-center" style="margin-top: -40px; font-size: 12px;">Dr. Parbuntian Sinaga, SH, MH</p>
+                </div>
+            </div>
+            <div class="row justify-content-center" style="margin-top: 50px;">
+                <div class="col-md-3">
+                    <p id="sub" class="text-center">Kepala Lembaga Pengembangan Kreativitas dan Kebangsaan</p>
+                    <p id="sub2" style="margin-top: 10px; font-size: 12px;">Dr. Ir. Ayub Muktiono, M.SIP, CIQaR</p>
+                </div>
+                <div class="col-md-3">
+                    <p id="sub" class="text-center">Kepala Lembaga Penjaminan Mutu</p>
+                    <p id="sub2" class="text-center" style="margin-top: 10px; font-size: 12px;">Dr. Ismail Razak, SE, M.Si</p>
+                </div>
+                <div class="col-md-3">
+                    <p id="sub" class="text-center">Kepala Lembaga Penelitian</p>
+                    <p id="sub2" class="text-center" style="margin-top: 10px; font-size: 12px;">Dr. H. Suwanda, ST., MT</p>
+                </div>
+                <div class="col-md-3">
+                    <p id="sub" class="text-center">Kepala Lembaga Pengabdian Kepada Masyarakat</p>
+                    <p id="sub2" class="text-center" style="margin-top: 10px; font-size: 12px;">Dr. Parbuntian Sinaga, SH, MH</p>
+                </div>
+            </div>
+            <div class="row justify-content-center text-center" style="margin-top: 100px;">
+                <div class="col-md-10">
+                <h4 class="judul text-center">PIMPINAN FAKULTAS</h4>
+                </div>
+            </div>
+            <div class="row justify-content-center" style="margin-top: 100px;">
+                <div class="col-md-10">
+                <p id="sub" style="margin-top: -50px;">FAKULTAS HUKUM</p>
+                <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Jabatan</th>
+                                    <th scope="col">Nama</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Dekan</td>
+                                    <td>Dr. Firman Wijaya, SH, MH</td>
+                                </tr>
+                                <tr>
+                                    <td>Wakil Dekan I</td>
+                                    <td>Hartono Widodo, SH, MH</td>
+                                </tr>
+                                <tr>
+                                    <td>Wakil Dekan II</td>
+                                    <td>Dr. Drs. HR. Muchtar. HP., B.Ac., SH., MH</td>
+                                </tr>
+                                <tr>
+                                    <td>Wakil Dekan IIIs</td>
+                                    <td>Yessy Kusumadewi, SH, MH</td>
+                                </tr>
+                            </tbody>
+                </table>
+                </div>
+            </div>
+            <div class="row justify-content-center" style="margin-top: 100px;">
+                <div class="col-md-10">
+                <p id="sub" style="margin-top: -50px;">Program Pascasarjana Ilmu Hukum (Magister dan Doktor)</p>
+                <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Jabatan</th>
+                                    <th scope="col">Nama</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ketua</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Sekertaris</td>
+                                    <td>Dr. Hartanto, SH, MH</td>
+                                </tr>
+                            </tbody>
+                </table>
+                </div>
+            </div>
+            <div class="row justify-content-center" style="margin-top: 100px;">
+                <div class="col-md-10">
+                <p id="sub" style="margin-top: -50px;">FAKULTAS EKONOMI</p>
+                <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Jabatan</th>
+                                    <th scope="col">Nama</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Dekan</td>
+                                    <td>Dr. Suharto, SE, MS</td>
+                                </tr>
+                                <tr>
+                                    <td>Wakil Dekan I</td>
+                                    <td>Dr. Harry Indra, SE</td>
+                                </tr>
+                                <tr>
+                                    <td>Wakil Dekan II</td>
+                                    <td>Dra. Budhi Suparningsih, MM</td>
+                                </tr>
+                                <tr>
+                                    <td>Wakil Dekan IIIs</td>
+                                    <td>Drs. Tjatjuk Siswandoko, MM</td>
+                                </tr>
+                            </tbody>
+                </table>
+                </div>
+            </div>
+            <div class="row justify-content-center" style="margin-top: 100px;">
+                <div class="col-md-10">
+                <p id="sub" style="margin-top: -50px;">Program Magister Manajemen</p>
+                <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Jabatan</th>
+                                    <th scope="col">Nama</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ketua</td>
+                                    <td>Prof. Dr. Bomer Pasaribu, SE, SH, MH</td>
+                                </tr>
+                                <tr>
+                                    <td>Sekertaris</td>
+                                    <td>Dra. Iwan Kurniawan Subagja, SE, MM</td>
+                                </tr>
+                            </tbody>
+                </table>
+                </div>
+            </div>
+            <div class="row justify-content-center" style="margin-top: 100px;">
+                <div class="col-md-10">
+                <p id="sub" style="margin-top: -50px;">FAKULTAS ILMU ADMINISTRASI</p>
+                <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Jabatan</th>
+                                    <th scope="col">Nama</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Dekan</td>
+                                    <td>Dr. Pandji Sukmana, M.Si</td>
+                                </tr>
+                                <tr>
+                                    <td>Wakil Dekan I</td>
+                                    <td>Uchaimid B. Robby, S.Sos. M.Si</td>
+                                </tr>
+                                <tr>
+                                    <td>Wakil Dekan II</td>
+                                    <td>Drs. Dwiheru Kristiawan, M.Si</td>
+                                </tr>
+                                <tr>
+                                    <td>Wakil Dekan IIIs</td>
+                                    <td>Saefudin Zuhri, S.Sos, M.IP</td>
+                                </tr>
+                            </tbody>
+                </table>
+                </div>
+            </div>
+            <div class="row justify-content-center" style="margin-top: 100px;">
+                <div class="col-md-10">
+                <p id="sub" style="margin-top: -50px;">Program Magister Ilmu Administrasi</p>
+                <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Jabatan</th>
+                                    <th scope="col">Nama</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ketua</td>
+                                    <td>Dr. Azis Hakim, SE, M.Si</td>
+                                </tr>
+                                <tr>
+                                    <td>Sekertaris</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                </table>
+                </div>
+            </div>
+            <div class="row justify-content-center" style="margin-top: 100px;">
+                <div class="col-md-10">
+                <p id="sub" style="margin-top: -50px;">FAKULTAS TEKNIK</p>
+                <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Jabatan</th>
+                                    <th scope="col">Nama</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Dekan</td>
+                                    <td>Dr. Harjono Padmono Putro, ST, M.Kom</td>
+                                </tr>
+                                <tr>
+                                    <td>Wakil Dekan I</td>
+                                    <td>Ali Khumaidi, S.Kom, M.Kom</td>
+                                </tr>
+                                <tr>
+                                    <td>Wakil Dekan II</td>
+                                    <td>Ajat Zatmika, ST, MT</td>
+                                </tr>
+                                <tr>
+                                    <td>Wakil Dekan IIIs</td>
+                                    <td>Nazaruddin Khuluk, ST, M.Si</td>
+                                </tr>
+                            </tbody>
+                </table>
+                </div>
+            </div>
+            <div class="row justify-content-center" style="margin-top: 100px;">
+                <div class="col-md-10">
+                <p id="sub" style="margin-top: -50px;">Program Magister Teknik</p>
+                <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Jabatan</th>
+                                    <th scope="col">Nama</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ketua</td>
+                                    <td>Dr. Ir. Soekmana Soma, MSP, M.Eng</td>
+                                </tr>
+                                <tr>
+                                    <td>Sekertaris</td>
+                                    <td>Dr. Kasman, S.Si, M.Si</td>
+                                </tr>
+                            </tbody>
+                </table>
+                </div>
+            </div>
+    </section>
+    <!-- Akhir Info -->
+
+    <!-- Akreditasi -->
+    <section id="info" class="shadow-lg">
+      <div class="row justify-content-center text-center">
+        <div class="col-md">
+          <h2 class="judulInfo">AKREDITASI BAN-PT UNKRIS</h2>
+          <div class="block-oranye2"></div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md">
+          <p id="sub" class="text-center">BERIKUT ADALAH SERTIFIKAT AKREDITASI BAN-PT UNIVERSITAS KRISNADWIPAYANA</p>
+          <ol id="sub2">
+            <li>Akreditasi BAN-PT Univeritas Krisnadwipayana : <a href="">[Download]</a></li>
+            <li>Akreditasi BAN-PT Prodi Ilmu Hukum : <a href="">[Download]</a></li>
+            <li>Akreditasi BAN-PT Prodi Akuntansi : <a href="">[Download]</a></li>
+            <li>Akreditasi BAN-PT Prodi Manajemen : <a href="">[Download]</a></li>
+            <li>Akreditasi BAN-PT Prodi Administrasi Negara : <a href="">[Download]</a></li>
+            <li>Akreditasi BAN-PT Prodi Administrasi Niaga : <a href="">[Download]</a></li>
+            <li>Akreditasi BAN-PT Prodi Arsitektur : <a href="">[Download]</a></li>
+            <li>Akreditasi BAN-PT Prodi Elektro : <a href="">[Download]</a></li>
+            <li>Akreditasi BAN-PT Prodi Industri : <a href="">[Download]</a></li>
+            <li>Akreditasi BAN-PT Prodi Informatika : <a href="">[Download]</a></li>
+            <li>Akreditasi BAN-PT Prodi Mesin : <a href="">[Download]</a></li>
+            <li>Akreditasi BAN-PT Prodi PWK : <a href="">[Download]</a></li>
+            <li>Akreditasi BAN-PT Prodi Sipil : <a href="">[Download]</a></li>
+            <li>Akreditasi BAN-PT Prodi Magister Hukum : <a href="">[Download]</a></li>
+            <li>Akreditasi BAN-PT Prodi Magister Manajemen : <a href="">[Download]</a></li>
+            <li>Akreditasi BAN-PT Prodi Magister Ilmu Administrasi : <a href="">[Download]</a></li>
+            <li>Akreditasi BAN-PT Prodi Magister Teknik : <a href="">[Download]</a></li>
+            <li>Akreditasi BAN-PT Prodi Doktoral Ilmu Hukum : <a href="">[Download]</a></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir Akreditasi -->
+
+    <!-- Informasi -->
+    <section id="informasi">
+      <div class="container">
+        <div class="row">
+          <div class="col-12" style="margin-top: 20px; margin-bottom: 10px">
+            <h2 style="text-transform: uppercase; text-align: center" class="judulInformasi">Informasi</h2>
+            <div class="container-fluid block-oranye3"></div>
+          </div>
+        </div>
+        <div class="row justify-content-center mt-3">
+          <div class="col-4 border-end">
+            <img style="margin-top: -3px; margin-right: 5px" src="img/customer-service.png" alt="logo-kontak" width="30" class="float-start img-fluid" />
+            <h5 style="font-size: 20px; font-family: proxima-nova">Kontak Layanan</h5>
+            <p style="margin-left: 35px; font-size: 13px; font-family: proxima-nova">0812 2345 6789</p>
+            <p style="margin-left: 35px; margin-top: -20px; font-size: 14px; font-family: proxima-nova">marketing@unkris.ac.id</p>
+          </div>
+          <div class="col-4">
+            <img style="margin-top: 1px; margin-right: 5px; margin-left: 30px" src="img/clock.png" alt="logo-jam" width="20" class="float-start img-fluid" />
+            <h5 style="font-size: 20px; font-family: proxima-nova">Jam Operasional :</h5>
+            <p style="margin-left: 55px; font-size: 13px; font-family: proxima-nova">Senin - Jumat (08.00 - 16.00)</p>
+            <p style="margin-left: 55px; margin-top: -20px; font-size: 13px; font-family: proxima-nova">Sabtu (08.00 - 13.00)</p>
+            <p style="margin-left: 55px; margin-top: -20px; font-size: 13px; font-family: proxima-nova">Minggu (Libur)</p>
+          </div>
+          <div class="col-4 border-start">
+            <img style="margin-left: 20px; margin-top: -2px" src="img/location-pin.png" alt="logo-kontak" width="25" class="float-start img-fluid" />
+            <h5 style="font-size: 20px; font-family: proxima-nova">Lokasi</h5>
+            <div class="row">
+              <div class="col-lg-6">
+                <p style="margin-left: 45px; font-size: 13px; font-family: proxima-nova">Kampus UNKRIS Jatiwaringin,</p>
+                <p style="margin-left: 45px; margin-top: -20px; font-size: 13px; font-family: proxima-nova">Pondok Gede 13077</p>
+              </div>
+              <div class="col-lg-6">
+                <div class="container-fluid" style="margin-top: -18px; margin-left: -15px">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.004723608668!2d106.90517511436093!3d-6.263106763059147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f2d2f0231219%3A0xb8502020812ebf03!2sUniversitas%20Krisnadwipayana!5e0!3m2!1sid!2sid!4v1640441691835!5m2!1sid!2sid"
+                    width="230" height="150" style="border: 0" allowfullscreen="" loading="lazy"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir informasi -->
+
+    <!-- footer -->
+    <div class="container-footer" style="margin-top: -25px; bottom: 0; position: relative; margin-bottom: -1000px; height: 60px">
+      <div class="container-foot" style="top: 999999; margin-bottom: -100px">
+        <footer class="py-3 my-4" style="height: 50px">
+          <p class="text-center text-muted copyrightText">Copyright &copy; 2021 ELID - All Rights Reserved.</p>
+        </footer>
+      </div>
+    </div>
+    <!-- akhir footer -->
+
+    <!-- Animated (AOS) -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+    <script>
+        AOS.init({
+            once: true,
+            duration: 2000,
+        });
+    </script>
+    <!-- Akhir Animated (AOS) -->
+
+    <!-- Script Scroll -->
+    <script>
+        const sejarahUnkris = document.querySelector(".sejarahUnkris") ;
+        const visiMisi = document.querySelector(".visiMisi");
+        const strukturOrganisasi = document.querySelector(".strukturOrganisasi");
+        const akreditasi = document.querySelector(".akreditasi");
+
+        sejarahUnkris.addEventListener('click', function() {
+            document.documentElement.scrollTop = 1510;
+        });
+
+        visiMisi.addEventListener('click', function() {
+            document.documentElement.scrollTop = 2720;
+        });
+
+        strukturOrganisasi.addEventListener('click', function() {
+            document.documentElement.scrollTop = 3900;
+        });
+
+        akreditasi.addEventListener('click', function() {
+            document.documentElement.scrollTop = 7150;
+        });
+    </script>
+    <!-- Akhir Script Scroll -->
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        (function () {
+            'use strict'
+
+            document.querySelector('#navbarSideCollapse').addEventListener('click', function () {
+                document.querySelector('.offcanvas-collapse').classList.toggle('open')
+            })
+        })()
+    </script>
+  </body>
+</html>
